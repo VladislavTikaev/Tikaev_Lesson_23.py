@@ -29,11 +29,11 @@ apple_y = random.randrange(0, window_size[1], 10)
 
 # Координаты стен
 obj_1_x = 200
-obj_1_y = 35
+obj_1_y = 30
 obj_2_x = 350
 obj_2_y = 40
 obj_3_x = 500
-obj_3_y = 25
+obj_3_y = 20
 obj_4_x = 650
 obj_4_y = 20
 
@@ -91,13 +91,13 @@ while not game_over:
     snake_Head.append(x_1)
     snake_Head.append(y_1)
     snake_List.append(snake_Head)
-    if x_1 == obj_1_x and y_1 == obj_1_y:
+    if x_1 == obj_1_x and y_1 >= obj_1_y and y_1 <= obj_1_y +410:
         game_over = True
-    if x_1 == obj_2_x and y_1 == obj_2_y:
+    if x_1 == obj_2_x and y_1 >= obj_2_y and y_1 <= obj_2_y +350:
         game_over = True
-    if x_1 == obj_3_x and y_1 == obj_3_y:
+    if x_1 == obj_3_x and y_1 >= obj_3_y and y_1 <= obj_3_y +320:
         game_over = True
-    if x_1 == obj_4_x and y_1 == obj_4_y:
+    if x_1 == obj_4_x and y_1 >= obj_4_y and y_1 <= obj_4_y +380:
         game_over = True
     if len(snake_List) > Length_snake:
         del snake_List[0]
